@@ -1,0 +1,44 @@
+
+Data type	Size	Signed?
+---------------------------
+BYTE		 8 bits Unsigned
+DWORD		32 bits	Unsigned
+INT32		32 bits	Signed
+INT64		64 bits	Signed
+LONG		32 bits	Signed
+LONGLONG	64 bits	Signed
+UINT32		32 bits	Unsigned
+UINT64		64 bits	Unsigned
+ULONG		32 bits	Unsigned
+ULONGLONG	64 bits	Unsigned
+WORD		16 bits	Unsigned
+
+BOOL is a typedef for an integer value that is used in a Boolean context. 
+The header file WinDef.h also defines two values for use with BOOL, TRUE and FALSE
+
+These datatypes are always the size of a pointer on the platform its running on (32 for 32bit platforms, 64 for 64)
+
+DWORD_PTR
+INT_PTR
+LONG_PTR
+ULONG_PTR
+UINT_PTR
+
+Quick recap on strings:
+
+typedef wchar_t WCHAR;
+wchar_t a = L'a';
+wchar_t *str = L"hello";
+
+CHAR				= char
+PSTR or LPSTR		= char*
+PCSTR or LPCSTR		= const char*
+PWSTR or LPWSTR		= wchar_t*
+PCWSTR or LPCWSTR	= const wchar_t*
+
+String macros:
+
+TCHAR		= wchar_t(on UNICODE system) 	
+TCHAR		= char(on ANSI system)
+TEXT("x")	= L"x"(on UNICODE system)
+TEXT("x")	= "x"
